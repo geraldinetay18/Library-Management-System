@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{647637C5-B4DD-4424-A04F-919C2353829B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SA47Team10a_GalaxyLibrary</RootNamespace>
+    <AssemblyName>SA47Team10a_GalaxyLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Book.cs">
+      <DependentUpon>GalaxyEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BossVenKat.cs" />
+    <Compile Include="CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport3.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport3.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ErrorException.cs" />
+    <Compile Include="frm11BookSearchForStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm11BookSearchForStaff.Designer.cs">
+      <DependentUpon>frm11BookSearchForStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm13MemberSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm13MemberSearch.Designer.cs">
+      <DependentUpon>frm13MemberSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm15Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm15Report.Designer.cs">
+      <DependentUpon>frm15Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm16Viewer1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm16Viewer1.Designer.cs">
+      <DependentUpon>frm16Viewer1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm17Viewer2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm17Viewer2.Designer.cs">
+      <DependentUpon>frm17Viewer2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm18Viewer3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm18Viewer3.Designer.cs">
+      <DependentUpon>frm18Viewer3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm4BooksDetailForMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm4BooksDetailForMember.designer.cs">
+      <DependentUpon>frm4BooksDetailForMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm5BookSearchForMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm5BookSearchForMember.Designer.cs">
+      <DependentUpon>frm5BookSearchForMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm6BorrowBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm6BorrowBook.designer.cs">
+      <DependentUpon>frm6BorrowBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm7Return.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm7Return.designer.cs">
+      <DependentUpon>frm7Return.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm8BookInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm8BookInformation.designer.cs">
+      <DependentUpon>frm8BookInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBookAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBookAdd.designer.cs">
+      <DependentUpon>frmBookAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBookModify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBookModify.designer.cs">
+      <DependentUpon>frmBookModify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBossVenkat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBossVenkat.designer.cs">
+      <DependentUpon>frmBossVenkat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm3ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm3ChangePassword.designer.cs">
+      <DependentUpon>frm3ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm2Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm2Login.designer.cs">
+      <DependentUpon>frm2Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm1Welcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm1Welcome.designer.cs">
+      <DependentUpon>frm1Welcome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBossVenkatCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBossVenkatCustomer.designer.cs">
+      <DependentUpon>frmBossVenkatCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCustomerInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCustomerInformation.designer.cs">
+      <DependentUpon>frmCustomerInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTemplate.designer.cs">
+      <DependentUpon>frmTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTemplateSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTemplateSearch.Designer.cs">
+      <DependentUpon>frmTemplateSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Galaxy.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Galaxy.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GalaxyEDM.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GalaxyEDM.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GalaxyEDM.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GalaxyEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GalaxyEDM.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GalaxyEDM.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Interface1.cs" />
+    <Compile Include="Member.cs">
+      <DependentUpon>GalaxyEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Staff.cs">
+      <DependentUpon>GalaxyEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction.cs">
+      <DependentUpon>GalaxyEDM.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport3.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport3.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm11BookSearchForStaff.resx">
+      <DependentUpon>frm11BookSearchForStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm13MemberSearch.resx">
+      <DependentUpon>frm13MemberSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm15Report.resx">
+      <DependentUpon>frm15Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm16Viewer1.resx">
+      <DependentUpon>frm16Viewer1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm17Viewer2.resx">
+      <DependentUpon>frm17Viewer2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm18Viewer3.resx">
+      <DependentUpon>frm18Viewer3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm4BooksDetailForMember.resx">
+      <DependentUpon>frm4BooksDetailForMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm5BookSearchForMember.resx">
+      <DependentUpon>frm5BookSearchForMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm6BorrowBook.resx">
+      <DependentUpon>frm6BorrowBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm7Return.resx">
+      <DependentUpon>frm7Return.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm8BookInformation.resx">
+      <DependentUpon>frm8BookInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBookAdd.resx">
+      <DependentUpon>frmBookAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBookModify.resx">
+      <DependentUpon>frmBookModify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBossVenkat.resx">
+      <DependentUpon>frmBossVenkat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm3ChangePassword.resx">
+      <DependentUpon>frm3ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm2Login.resx">
+      <DependentUpon>frm2Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm1Welcome.resx">
+      <DependentUpon>frm1Welcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBossVenkatCustomer.resx">
+      <DependentUpon>frmBossVenkatCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCustomerInformation.resx">
+      <DependentUpon>frmCustomerInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTemplate.resx">
+      <DependentUpon>frmTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTemplateSearch.resx">
+      <DependentUpon>frmTemplateSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EntityDeploy Include="GalaxyEDM.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>GalaxyEDM.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Galaxy.xsc">
+      <DependentUpon>Galaxy.xsd</DependentUpon>
+    </None>
+    <None Include="Galaxy.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Galaxy.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Galaxy.xss">
+      <DependentUpon>Galaxy.xsd</DependentUpon>
+    </None>
+    <None Include="GalaxyEDM.edmx.diagram">
+      <DependentUpon>GalaxyEDM.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pexels-photo-1018134.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pexels-photo-753516.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="GalaxyEDM.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GalaxyEDM.edmx</DependentUpon>
+      <LastGenOutput>GalaxyEDM.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="GalaxyEDM.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GalaxyEDM.edmx</DependentUpon>
+      <LastGenOutput>GalaxyEDM.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
